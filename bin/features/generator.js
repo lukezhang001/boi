@@ -30,9 +30,16 @@ module.exports = (dirname, template) => {
   }, (code, stdout) => {
     // global template path
     const TemplatePath = Path.posix.join(_.trim(stdout), GenerateTemplate);
-
     try {
-      const TemplateRealPath = require.resolve(TemplatePath);
+      let TemplateRealPath =null;
+      try {
+        TemplateRealPath = require.resolve(TemplatePath);
+      }catch(e){
+      }
+      if(!TemplateRealPath){
+        TemplateRealPath = require.resolve(Path.join(__dirname, '../../node_modules', GenerateTemplate));
+      }
+      // const TemplateRealPath = require.resolve(TemplatePath);
       YeomanRuntime.register(TemplateRealPath, AppCommand);
       inCurrentDir ? YeomanRuntime.run(`${AppCommand} ${appname} -c`) : YeomanRuntime.run(`${AppCommand} ${appname}`);
     } catch (e) {

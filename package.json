@@ -45,5 +45,8 @@
   "bugs": {
     "url": "https://github.com/boijs/boi/issues"
   },
-  "homepage": "https://boijs.github.io/"
+  "homepage": "https://boijs.github.io/",
+  "devDependencies": {
+    "generator-boiapp": "^2.0.1"
+  }
 }
