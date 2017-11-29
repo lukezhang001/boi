@@ -9,7 +9,7 @@
     "boi": "bin/boi.js"
   },
   "dependencies": {
-    "boi-compiler": "0.0.4",
+    "boi-my-compiler": "0.0.4",
     "boi-deploy": "0.0.1",
     "boi-mock": "0.0.1",
     "boi-parser": "0.0.5",

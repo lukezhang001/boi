@@ -6,7 +6,7 @@ const Cli              = require('commander');
 const BoiParser        = require('boi-parser');
 const BoiDeployer      = require('boi-deploy');
 const BoiServer        = require('boi-server');
-const BoiCompiler      = require('boi-compiler');
+const BoiCompiler      = require('boi-my-compiler');
 const FeatureInfo      = require('./features/info.js');
 const FeatureGenerator = require('./features/generator.js');
 
